@@ -1,0 +1,73 @@
+**Everything in python is object**
+**Every object contains methods **
+
+number
+-------
+number can be integer or decimal or octal or hexa.
+
+val = 10
+aval = 43.3
+
+
+string
+------
+string can be defined in single or double or triple quotes.
+
+aname = 'python programming'
+bname = "java programming"
+cname = """machine learning"""
+
+
+
+list  ( array in C )
+------
+list contains set of elements.
+Elements can set of numbers or strings or any combination.
+list elements are defined in []
+
+
+alist = [10,20,30,46,7]
+blist = ["python","java","scala"]
+clist = [43,6.34,"java"]
+
+
+
+tuple
+-------
+tuple contains set of elements like the list.
+Elements can set of numbers or strings or any combination.
+tuple elements are defined in ().
+
+atup = (30,4.34,"oracle")
+
+
+dictionary
+-----------
+dictionary contains elements in the form of keys and values.
+dictionary elemnts are defined in {}.
+*** Indexing is not allowed in dictionary ***
+
+key is either number or string
+value can be number or string or list or tuple or dictionary or set or any complex dictionary
+
+syntax:     object = { key:value  , key:value , key:value ... }
+example:    book   = {"chap1":10  ,"chap2":20  ,"chap3":30 }
+             data  = {1:2,3:4,5:6}
+           # dictionary of lists
+           newbook = {"chap1":[10,"Rita","US"]  ,"chap2":[20,"Gita","UK"]  ,"chap3":[30,"Rao","Ind"] }
+
+
+set
+----
+set is UNORDERED colletion of UNIQUE values of SAME type.
+
+aset = {10,20,20,30,30}
+
+
+
+
+
+
+
+
+
