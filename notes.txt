@@ -1,118 +1,125 @@
-**Everything in python is object**
-**Every object contains methods **
+
+*** Everything in python is Object ***
+*** Every object contains methods ****
 
 number
--------
+--------
 number can be integer or decimal or octal or hexa.
 
 val = 10
-aval = 43.3
+aval = 34.3
 
 
 string
-------
-string can be defined in single or double or triple quotes.
+--------
+string is defined in single or double or triple quotes.
 
 aname = 'python programming'
-bname = "java programming"
-cname = """machine learning"""
+bname = "scala programming"
+cname = """java programming"""
 
 
-
-list  ( array in C )
-------
+list ( kind of array in C)
+----
 list contains set of elements.
-Elements can set of numbers or strings or any combination.
-list elements are defined in []
+Elements can be set of numbers or strings or any combination.
 
-
-alist = [10,20,30,46,7]
-blist = ["python","java","scala"]
-clist = [43,6.34,"java"]
+alist =[10,20,30,40]
+blist = ["java","oracle"]
+clist = [45,34.32,"java"]
 
 
 
-tuple    ( immutable or unchangable )
--------
-tuple contains set of elements like the list.
-Elements can set of numbers or strings or any combination.
-tuple elements are defined in ().
-**** Elements inside tuple cannot be modified directly*****
+tuple  (  read only , immutable , unchangable )
+-----
+tuple contains set of elements.
+Elements can be set of numbers or strings or any combination.
 
+**** Elements inside the tuple cant be modified directly ****
 
-atup = (30,4.34,"oracle")
+atup = (10,34,"oracle",56.5)
 
 
 dictionary
------------
-dictionary contains elements in the form of keys and values.
-dictionary elemnts are defined in {}.
-*** Indexing is not allowed in dictionary ***
+-------------
+dictionary contains elements in key:value pairs
+keys are string or number which are used to uniquely identify the value.
+values can be either number or string or list or tuple or dictionary or set or list of lists of any complex structure.
 
-key is either number or string
-value can be number or string or list or tuple or dictionary or set or any complex dictionary
 
-syntax:     object = { key:value  , key:value , key:value ... }
-example:    book   = {"chap1":10  ,"chap2":20  ,"chap3":30 }
-             data  = {1:2,3:4,5:6}
-           # dictionary of lists
-           newbook = {"chap1":[10,"Rita","US"]  ,"chap2":[20,"Gita","UK"]  ,"chap3":[30,"Rao","Ind"] }
+syntax:    object = { key:value , key:value , key:value .... }
+           book   = {"chap1":10 ,"chap2":20 ,"chap3":30}
+           info   = {1:2,3:4,5:6}
+           bookinfo   = {"chap1":[10,"Rita","US"] ,"chap2":[20,"Gita","UK"] }
+
 
 
 set
 ----
-set is UNORDERED colletion of UNIQUE values of SAME type.
+set is UNORDERED collection of UNIQUE elements of SAME types.
 
-aset = {10,20,20,30,30}
+aset = {10,20,30,30,30}
+
+
+
+comments
+--------
+- single line comment
+# this is single line comment
+
+- multi line comment
+all the lines defined in between ''' and ''' are ignored by interpreter.
 
 
 
 mutable objects
------------------
+----------------
 list
-set
 dictionary
+set
 
 
-
-immutable objects  ( unchangable or uneditable)
--------------------
-string
+immutable objects
+---------------------
 tuple
 number
+string
 
 
-functions | definitions | submodule | block
 
-- buildin functions
+function| definition| submodule | block
+----------------------------------
+
+- builtin functions
 - user defined functions
 
-How to display all the list of builtin functions and exceptions ?
------------------------------------------------------------
+builtin functions  ( already available in the python)
+--------------------
 
-In the shell
+
+How to display all the builtin functions ?
+In the console(shell)
 
 dir(__builtins__)
 
-builtin functions
-------------------
+
 print()
 len()
 range()
 help()
 dir()
-input()
+input() :  read input from the keyboard
 max()
 min()
 sum()
 type()
 isinstance()
 chr()
+ord()
 
 
 
-typecasting functions ( converting from one object to another object )
---------------------------------
+typecasting functions - converting from one object to another object
 str()
 int()
 float()
@@ -127,258 +134,371 @@ set()
 
 
 
-
 operators
------------
+---------
 
 
-arithmetic operators :  +   -  *  % /
+arithmetic operators :  + - * % /
 
-
-assignment operators  ( ++ and -- are NOT allowed in python )
+assignment operators  ( ++ and -- are not allowed in python )
 ----------------------
 val = 10
 
-val+=1   or   val = val + 1
-val-=1   or   val = val - 1
-
+val = val + 1  or val+=1
+val = val - 1 or val-=1
 
 relational operators
-----------------------
+-----------------
 < <= > >= == !=
 
-if len(name) > 10 :
-   # logic
-
+name = "python"
+if len(name) >=6 :
+    # your logic
 
 logical operators
---------------------
-and
-or
-not
+---------------------
+and   or   not
 
 name = "python"
 if len(name) == 6  and name.isupper():
-     # if both the conditions are true then execute this
+    # your logic
 
-if len(name) == 6  or name.isupper():
-    # if either of the expression is true ..then execute
+if len(name)  ==6 or  name.islower():  # If one of the condition is True
+    # your logic
 
 
 special operators
---------------------
-+ : joining operator
-* : repetition operator
+----------------
++
+---
+3 + 3
+"hello" + "python"
+[10,20] + [30,40]
+(4,43) + (43,4,6)
+[10,20] + (4,43)   # invalid
 
+
+*
+---
+"python" * 3
+[10,20] * 4
+output = [10,20] * 4
+
+
+
+in
+---
 name = "python"
-name * 4
+if "p" in name:
+   # your logic
+
+alist = [10,20,30]
+if 40 in alist:
+   print("exists")
+else:
+   print("doesn't exist")
 
 
 file handling
---------------
+-------------
 
-- working with flat files  (  txt  csv conf prop  rtf log.... )
+- working with flat files  ( csv txt conf log rtf prop  )
 
-
-- working with third party files ( xlsx ppt pptx docx pdf zip rar .7z ... )
-
+- working with third party files ( pdf  xlsx   xls  docx   pptx ... )
 
 
 working with flat files
------------------------
+---------------------------
+
 
 
 opening the file
------------------
-syntax:    object = open(filename,mode)
-example:     fobj = open("customers.txt","r")  # read operation
-
-             fobj = open("customers.txt","w")  # writing to the file (If file doesn't exist.. file will be created)
-             case1 : If the file is not existing... file will be created firstly.
-             case2 : If the file is already existing ...it overwrites the file content and starts from the first line
-
-             fobj = open("customers.txt","a")  # append operation
-             case1 : If the file is not existing... file will be created firstly.
-             case2 : If the file is already existing ...it appends the file content to the end of the file
+-------------------
+read mode
+write mode
+append mode
 
 
+syntax:     object = open(filename, mode)
+example:     fobj  = open("customers.txt","r")
+             fobj  = open("customers.txt","w")
+             case 1 :if the file is not existing ... file will be created first
+             case 2 : if the file is already existing .. it overwrites the existing content first.
+
+             fobj  = open("customers.txt","a")
+             case 1 :if the file is not existing ... file will be created first
+             case 2 : if the file is already existing .. it appends the data to the existing content first.
 
 
 closing the file
-------------------
-object.close()
-
-
-
-
-
-
-read operation
 ----------------
+fobj.close()
+
+
+
+file read operation
+------------------
 
 - using file object
-- fobj.readlines()
-- fobj.read()
-- fobj.readline()
-- using csv libary
+- using fobj.readlines()
+- using fobj.read()
+- using csv library
 - using pandas library
 
 
+exception handling
+---------------------
+
+There are 2 types of errors.
+
+- syntax error
+- semantic eror or runtime error or logical error
+
+handling the errors in runtime is known as exception handling.
 
 
-function | definition  | submodule | block
-------------------------------------------
+
+try
+except
+else
+finally
+
+
+
+
+
+function | definition | submodule | block
+-------------------------------------------
+
 - reusability purpose
-- define the block once and call it for multiple times.
+- define your block once ... and call it for multiple times
 
 
 ways of passing arguments
------------------------
--fixed arguments
--default arguments
--keyword arguments
--variable length arguments
+---------------------------
+fixed arguments
+default arguments
+keyword arguments
+variable length arguments
 
 
 
-library | module | package
------------------------------
-- Every library contains set of methods
-- reusability
-
+library | module | package 
+---------------------------------------
+-library contains set of methods which are predefined
+-reusability purpose
 
 
 builtin library
----------------
-builtin library comes with python 
-builtin library are generally(math operations , OS operations, sending mails, ftp , copy, move, string manipulations, csv , json) used by every developer.
+-------------------
+When python installed all the builtin libraries will be available which are generally used by every developer.
+(date and time operations , math operations , OS level operations , string manipulations , working with mails,
+process related libraries .... )
+
+
 
 third party library
-----------------------
-Depending on the requirement(N/W automations, data analtyics, image processing , cloud automation, excel automation)  developer has to install third party library from
+----------------
+Depending on the customized requirement( cloud automation , data analytics , ML libraries , N/W automation .., ) , developer has to install the third party library from
 
-- www.pypi.org  ( downloading manually)
-- using pip tool
+- pypi.org  ( manually downloading ) 
+- using pip tool  ( pip install cx_Oracle)
 - using easy_install tool
-- using conda tool ( only for Anaconda )
+- using conda tool
 
 
-re  - regular expression   ( global concept)
---------------------------
-import re
 
-- search for patterns  ( anywhere in the string)
-- match     ( at the beginning of the string)
+
+
+
+
+builtin libraries which are generally used
+----------------------------------------
+sys           : system python config information
+urllib.request: working with http
+math          : mathematical operations
+random        : random numbers
+calendar
+smtplib       : sending mails
+ftplib        : ftp'ng the file
+telnetlib     :
+logging       : logging all the events
+shutil        : copy,move,rmtree ....
+filecmp       : comparing directories
+zipfile       : create/extract the zip files
+rarfile       : create/extract the tar files
+tarfile       : create/extract the tarfiles
+getpass       : shadowing the password
+json          : reading/writing json files
+csv           : reading/writing csv files
+xml        
+sysconfig     : system configuration
+collections   : working with dictionaries
+argparse      : passing args from command line
+optparse      : passing args from command line
+time          : working with date and time
+datetime      : working with date and time
+cryptography  : encrypting and decrypting the passwords
+heapq         : performing array operations
+gzip          : reading gunzip files
+re            : validating the strings
+ipadresss     : validting ip address
+platform      : display platform information
+pathlib       : creating temp files
+threading     : for performing multi threading
+multiprocessing:
+subprocess    : invoking the system commands ( linux or dos commands)
+
+
+
+frequently used third party libraries
+---------------------------------------
+database related
+----------------
+pymysql   :
+cx_Oracle
+pymongo
+pymssql
+
+web frameworks ( developing web applications)
+--------------
+django
+flask
+bottom
+
+analytics/machine learning
+---------------------------
+numpy
+scipy
+pandas
+seaborn
+plotly
+ggplot
+matplotlib   : visualizing data .. bar graph.. pie graph
+scikit-learn :  machine learning algorithms
+
+image processing
+---------------
+pillow
+opencv
+pytorch
+
+
+APIs ( REST API)
+-----
+requests
+
+excel programming
+------------------
+openpyxl    : reading/write excel files
+xlsxwriter  : writing to excel file
+python-docx : working with ms-word
+pandas
+
+networking
+-----------
+paramiko   :  interacting with remote servers
+netmiko    :  connecting to router/switch
+pyping     :  ping any host or ip address
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+re   - regular expressions
+---
+- search
+- match  ( at the beginning of the line)
+- sub
 - findall
-- replace
+- split
 
 
-wildcards or metacharacters   ( these metacharacters are common in all the languages )
--------------------------------
+wildcards or metacharacters
+------------------------------
 
-^ :  only at the beginning of the string
-     if re.search("^python",line)  # display all the lines starting with python
 
-$ :  check at the end of the string
-     if re.search("python$",line)
+^ : match at the beginning of the string
+    if re.search("^python",line):
 
-* :  zero or more occurences of the preceding character
-     if re.search("pyt*hon",line)
+$ : match at the end of the string
+    if re.search("python$",line):
 
-+ :  one or more occurences of the preceding character
-     if re.search("pyt+hon",line)
+* : zero or more occurences of the preceding character
+    if re.search("pyt*hon",line):
+
++ : one or more occurences of the preceding character
+    if re.search("pyt+hon",line):
 
 . : any single character or digit or symbol
-     if re.search(".ython",line)
+    if re.search(".ython",line):
 
 ? : either zero or one occurence of the preceding character
+    if re.search("pyt?hon",line):
 
+(|) : (pattern1|pattern2)
+    if re.search("unix|perl",line):
+ 
 
-():  ( pattern1|pattern2)
-     if re.search("(perl|python)",line)
+[]  : character class
+      if re.search("[qpm]ython",line):  #qython  or python  or mython
 
 
-[] :  character character
-      if re.search("[pmqz9]ython",line)
-      if re.search("[a-zA-Z0-9]ython",line):
-      if re.search("[abcdefhABCDEFH01234]ython",line):
+{} : { min,max} occurences of the preceding character
+     if re.search("pyt{1,5}hon",line):
+     if re.search("pyt{1,}hon",line):
+     if re.search("pyt{2}hon",line):  #
 
-{} : {min,max} occurences of preceding character
-     if re.search("pyt{1,4}hon",line)
-     if re.search("pyt{3}hon",line)
-     if re.search("pyt{5,}hon",line)
-
-\d  : any digit
-\d{3}:
-\w  :  word boundary
-\s  :  white spaces
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\d  : digit
+\d{3}
+\w  : word
+\s  : whitespaces
 
 
 
