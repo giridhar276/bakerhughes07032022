@@ -82,9 +82,9 @@ tuple
 number
 
 
-functions | definitions | sumodule | block
+functions | definitions | submodule | block
 
-- builin functions
+- buildin functions
 - user defined functions
 
 How to display all the list of builtin functions and exceptions ?
@@ -192,8 +192,14 @@ opening the file
 -----------------
 syntax:    object = open(filename,mode)
 example:     fobj = open("customers.txt","r")  # read operation
+
              fobj = open("customers.txt","w")  # writing to the file (If file doesn't exist.. file will be created)
+             case1 : If the file is not existing... file will be created firstly.
+             case2 : If the file is already existing ...it overwrites the file content and starts from the first line
+
              fobj = open("customers.txt","a")  # append operation
+             case1 : If the file is not existing... file will be created firstly.
+             case2 : If the file is already existing ...it appends the file content to the end of the file
 
 
 
@@ -201,6 +207,178 @@ example:     fobj = open("customers.txt","r")  # read operation
 closing the file
 ------------------
 object.close()
+
+
+
+
+
+
+read operation
+----------------
+
+- using file object
+- fobj.readlines()
+- fobj.read()
+- fobj.readline()
+- using csv libary
+- using pandas library
+
+
+
+
+function | definition  | submodule | block
+------------------------------------------
+- reusability purpose
+- define the block once and call it for multiple times.
+
+
+ways of passing arguments
+-----------------------
+-fixed arguments
+-default arguments
+-keyword arguments
+-variable length arguments
+
+
+
+library | module | package
+-----------------------------
+- Every library contains set of methods
+- reusability
+
+
+
+builtin library
+---------------
+builtin library comes with python 
+builtin library are generally(math operations , OS operations, sending mails, ftp , copy, move, string manipulations, csv , json) used by every developer.
+
+third party library
+----------------------
+Depending on the requirement(N/W automations, data analtyics, image processing , cloud automation, excel automation)  developer has to install third party library from
+
+- www.pypi.org  ( downloading manually)
+- using pip tool
+- using easy_install tool
+- using conda tool ( only for Anaconda )
+
+
+re  - regular expression   ( global concept)
+--------------------------
+import re
+
+- search for patterns  ( anywhere in the string)
+- match     ( at the beginning of the string)
+- findall
+- replace
+
+
+wildcards or metacharacters   ( these metacharacters are common in all the languages )
+-------------------------------
+
+^ :  only at the beginning of the string
+     if re.search("^python",line)  # display all the lines starting with python
+
+$ :  check at the end of the string
+     if re.search("python$",line)
+
+* :  zero or more occurences of the preceding character
+     if re.search("pyt*hon",line)
+
++ :  one or more occurences of the preceding character
+     if re.search("pyt+hon",line)
+
+. : any single character or digit or symbol
+     if re.search(".ython",line)
+
+? : either zero or one occurence of the preceding character
+
+
+():  ( pattern1|pattern2)
+     if re.search("(perl|python)",line)
+
+
+[] :  character character
+      if re.search("[pmqz9]ython",line)
+      if re.search("[a-zA-Z0-9]ython",line):
+      if re.search("[abcdefhABCDEFH01234]ython",line):
+
+{} : {min,max} occurences of preceding character
+     if re.search("pyt{1,4}hon",line)
+     if re.search("pyt{3}hon",line)
+     if re.search("pyt{5,}hon",line)
+
+\d  : any digit
+\d{3}:
+\w  :  word boundary
+\s  :  white spaces
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
